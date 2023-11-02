@@ -8,6 +8,7 @@ module.exports = {
   devServer: {
     port: 5001,
   },
+  // devtool:"eval-source-map",
   module: {
     rules: [
       {
@@ -50,5 +51,11 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  // output: {
+  //   environment: {
+  //     module: true,
+  //     dynamicImport: true
+  //   }
+  // },
   target: "web",
 };

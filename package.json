@@ -3,19 +3,17 @@
     "version": "0.0.1",
     "license": "MIT",
     "scripts": {
-      "postinstall": "(cd host && npm install && npm run build); (cd remote1 && npm install && npm run build); (cd remote2 && npm install && npm run build)",
-      "build": "(cd host && npm run build); (cd remote1 && npm run build); (cd remote2 && npm run build)",
-      "start": "node server.js"
+        "postinstall": "(cd host && npm install && npm run build); (cd remote1 && npm install && npm run build); (cd remote2 && npm install && npm run build); (cd remote3 && npm install && npm run build)",
+        "build": "(cd host && npm run build); (cd remote1 && npm run build); (cd remote2 && npm run build); (cd remote3 && npm run build)",
+        "start": "node server.js"
     },
     "private": true,
     "dependencies": {
-      "express": "^4.15.2"
-    },
-    "devDependencies": {
-
+        "cors": "^2.8.5",
+        "express": "^4.15.2"
     },
     "engines": {
-      "node": "7.5.0",
-      "npm": "4.1.2"
+        "node": "7.5.0",
+        "npm": "4.1.2"
     }
-  }
+}

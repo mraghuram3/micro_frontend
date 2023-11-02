@@ -10,7 +10,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "public"),
     },
-    port: 5002,
+    port: 5004,
   },
   module: {
     rules: [
@@ -30,11 +30,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "Remote1",
+      name: "Remote3",
       filename: "moduleEntry.js",
       exposes: {
         "./App": "./src/App",
-        "./Button": "./src/Button",
+        "./TextBox": "./src/TextBox",
       },
       shared: {
         ...dependencies,
@@ -55,11 +55,5 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
-  // output: {
-  //   environment: {
-  //     module: true,
-  //     dynamicImport: true
-  //   }
-  // },
   target: "web",
 };
